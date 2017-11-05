@@ -1,0 +1,128 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HelloworldActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/host_edit_text"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Host" />
+        <EditText
+            android:id="@+id/port_edit_text"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Enter Port" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/Login_LinearLayout_Phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        >
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/shape_login_linear"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名："
+                android:textSize="16sp"
+                android:textColor="#000000"
+                />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/message_edit_text"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:hint="填写用户名"
+            android:textCursorDrawable="@null"
+
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/shape_register_et"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        >
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/shape_login_linear"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码："
+                android:textSize="16sp"
+                android:textColor="#000000"
+                />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/password_edit_text"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:hint="输入密码"
+            android:textCursorDrawable="@null"
+
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/shape_register_et"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/send_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="login"
+        android:onClick="sendMessage"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="18dp"
+        android:layout_gravity="center"
+        android:layout_above="@+id/Login_TextView_Send"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:textSize="16sp"
+        android:text="Response:" />
+
+    <TextView
+        android:id="@+id/grpc_response_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars = "vertical"
+        android:textSize="16sp" />
+
+</LinearLayout>
