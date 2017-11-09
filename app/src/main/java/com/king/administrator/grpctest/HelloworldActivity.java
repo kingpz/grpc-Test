@@ -100,7 +100,7 @@ public class HelloworldActivity extends AppCompatActivity {
                 if(reply.getCode() == 1){
                     return reply.getMessage();
                 }else{
-                    return "用户名或密码错误";
+                    return "登录失败！用户名或密码错误";
                 }
                // return reply.getMessage();
             } catch (Exception e) {
